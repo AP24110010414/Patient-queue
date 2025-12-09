@@ -3,7 +3,6 @@
 #include <string>
 using namespace std;
 
-// Structure to store patient details
 struct Patient {
     int id;
     string name;
@@ -13,7 +12,6 @@ struct Patient {
 
 queue<Patient> q;
 
-// Function to add patient
 void addPatient() {
     Patient p;
     cout << "\nEnter Patient ID: ";
@@ -33,7 +31,6 @@ void addPatient() {
     cout << "\nPatient added successfully!\n";
 }
 
-// Function to serve patient
 void servePatient() {
     if (q.empty()) {
         cout << "\nNo patients to serve!\n";
@@ -50,7 +47,6 @@ void servePatient() {
     cout << "Appointment Time: " << p.time << endl;
 }
 
-// Function to search patient by ID
 void searchPatient() {
     if (q.empty()) {
         cout << "\nQueue is empty!\n";
@@ -81,12 +77,10 @@ void searchPatient() {
         cout << "\nPatient not found!\n";
 }
 
-// Function to count patients
 void countPatients() {
     cout << "\nTotal Patients in Queue: " << q.size() << endl;
 }
 
-// Function to display all patients
 void displayPatients() {
     if (q.empty()) {
         cout << "\nNo patients in queue!\n";
@@ -106,7 +100,6 @@ void displayPatients() {
     }
 }
 
-// Main function
 int main() {
     int choice;
 
@@ -133,4 +126,5 @@ int main() {
     } while (choice != 6);
 
     return 0;
+
 }
